@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@0;1&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 4rem);
+  grid-auto-rows: 3rem;
+  gap: 4px;
+  text-align: bottom;
+  padding: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  width: max-content;
+  align-self: center;
+  margin: 3rem auto 2rem;
+}
+.calculator .display {
+  grid-area: 1/1/3/5;
+  background: black;
+  color: white;
+  width: 100%;
+  text-align: right;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0.5rem 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+.calculator .display .full-expression {
+  color: orange;
+  overflow-y: none;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-track-color: transparent;
+}
+.calculator .display .full-expression::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.calculator button {
+  font-size: 1.3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+}
+.calculator #clear {
+  grid-area: 3/1/4/3;
+  background: #ff0000;
+}
+.calculator #decimal {
+  grid-area: 7/3/8/4;
+}
+.calculator #zero {
+  grid-area: 7/1/8/3;
+}
+.calculator #divide {
+  grid-area: 3/4/4/5;
+}
+.calculator #multiply {
+  grid-area: 3/3/4/4;
+}
+.calculator #add {
+  grid-area: 5/4/6/5;
+}
+.calculator #subtract {
+  grid-area: 4/4/5/5;
+}
+.calculator #equals {
+  grid-area: 6/4/8/5;
+  background-color: rgba(0, 0, 245, 0.7);
+}
